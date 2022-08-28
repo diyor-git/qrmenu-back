@@ -13,7 +13,7 @@ const router = require("./router");
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:3000"];
+const allowedOrigins = ["http://localhost:3000", "https://fascinating-mooncake-3e9683.netlify.app/"];
 
 app.use(
   cors({
