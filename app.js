@@ -13,14 +13,9 @@ const router = require("./router");
 
 const app = express();
 
-const allowedOrigins = ["*"];
+app.use(cors({ credentials: true, origin: true }));
+app.options("*", cors());
 
-app.use(
-  cors({
-    origin: allowedOrigins,
-    credentials: true,
-  })
-);
 app.use(fileUpload({}));
 app.use(bodyParser.json());
 app.use(express.static(path.resolve(__dirname, "static")));
